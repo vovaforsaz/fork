@@ -46,13 +46,27 @@ if __name__ == '__main__':
     else:
         print("count value reached %d" % (count))
 
+    arrays = []
+    count = 1
+    while (count < 501):
+        arrays.append(count)
+        count += 1
+    print(arrays)
+
+    # task2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    # for number in task2:
+    #     if number %2 == 0:
+    #         print(number)
 
 def loops_task1():
     """
     Use loop for creation list with 500 integer elements
     """
-    # TODO write the code
-    result = None
+    result = []
+    count = 0
+    while (count < 500):
+        result.append(count)
+        count += 1
     return result
 
 
@@ -61,6 +75,8 @@ def loops_task2():
     """
     Use loop for creation new list with even elements [2,4,6,8,10]
     """
-    # TODO write the code
-    result = None
-    return result
+    for result in task2:
+        if result % 2 == 0:
+            return result
+
+
