@@ -20,14 +20,15 @@ if __name__ == '__main__':
     print("A list: %s" % mylist)
 
 
+
 def string_formatting_task1():
     """
     You will need to write a format string which prints out the data using the following syntax:
     Hello John Doe. Your current balance is $53.44.
     """
-    data = ("John", "Doe", 53.44)
+    data = ("John", "Doe.", 53.44, "Your current balance is")
     format_string = "Hello"
     # TODO write the code
-    res = "%s, %s" % (format_string, data[0])
+    res = "%s %s %s %s $%s" % (format_string, data[0], data[1], data[3], data[2])
     print(res)
     return res

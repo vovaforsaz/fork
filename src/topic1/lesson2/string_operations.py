@@ -20,14 +20,17 @@ if __name__ == '__main__':
     # Slit string by specific character
     print(astring.split(" "))
 
-
+    quote = "I am the wisest man alive, for I know one thing, and that is that I know nothing."
+    print(len(quote.split(" ")))
+    word = "wisest"
+    print(word.upper())
 def string_operations_task1():
     """
     Split string by the empty space and return LIST
     """
     quote = "I am the wisest man alive, for I know one thing, and that is that I know nothing."
-    # TODO write the code
-    return quote
+
+    return quote.split(" ")
 
 
 def string_operations_task2():
@@ -36,13 +39,13 @@ def string_operations_task2():
     """
     word = "wisest"
     # TODO write the code
-    return word
+    return word.upper()
 
 
 def string_operations_task3():
     """
     Reverse tne string
     """
-    word = "wisest"
+    word = "tsesiw"
     # TODO write the code
     return word

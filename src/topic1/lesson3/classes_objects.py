@@ -47,8 +47,8 @@ def class_task1():
     """
 
     class Car:
-        name = ""
-        color = ""
+        name = "white"
+        color = "Tesla"
         # TODO write the code
 
     return Car()
