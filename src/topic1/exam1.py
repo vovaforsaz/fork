@@ -1,3 +1,21 @@
+# Листинг 1
+# вводим N
+
+# создаем пустой список для хранения простых чисел
+n = 100
+lst = []
+k = 0
+for i in range(2, n+1):
+    for j in range(2, i):
+        if i % j == 0:
+            k = k + 1
+    if k == 0:
+        lst.append(i)
+    else:
+        k = 0
+print(lst)
+
+
 def loops_exam1():
     """
     Collect all prime numbers in range - 1 to 100
@@ -11,6 +29,16 @@ def loops_exam1():
     61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131,
     137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, etc.
     """
-    task_list = [1]
-    # TODO implement me here
-    return task_list
+    n = 50
+    lst = [1]
+    k = 0
+    for i in range(2, n + 1):
+        for j in range(2, i):
+            if i % j == 0:
+                k = k + 1
+        if k == 0:
+            lst.append(i)
+        else:
+            k = 0
+
+    return lst
