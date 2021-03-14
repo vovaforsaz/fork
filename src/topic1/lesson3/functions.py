@@ -22,7 +22,12 @@ def sum_two_numbers(a, b):
     listens.append(b)
 
     return listens
+def sum_two_numbers_2(a, b):
+    '''
+    Functions may return a value to the caller, using the keyword- 'return' . For example:
+    '''
 
+    return a + b
 
 if __name__ == '__main__':
     my_function()
@@ -41,5 +46,5 @@ def function_task2(list1, list2):
     """
     Modify this function to return concatenated lists
     """
-    lis = sum_two_numbers(list1, list2)
+    lis = sum_two_numbers_2(list1, list2)
     return lis
