@@ -1,3 +1,5 @@
+import numpy as np
+
 if __name__ == '__main__':
     """
     There are two types of loops in Python, for and while.
@@ -8,6 +10,32 @@ if __name__ == '__main__':
     4.4. break and continue Statements, and else Clauses on Loops
     4.5. pass Statements¶
     """
+
+    # M1 = [[1,2,3,4,6,10,12],
+    #     [5,-6,7,8],
+    #     [5,6,5,8],
+    #     [1,6,7,11]]
+    M2 = [[-1, 2, 3, 4],
+          [5, -6, 7, 8],
+          [5, 6, 5, 8],
+          [1, 6, 7, 11]]
+    # TODO print diagonal - 1,-6,5,11
+    tmp = reversed(M2)
+    print(tmp)#.diagonal(M2, offset=0, axis1=0, axis2=1))
+    print(np.diagonal(M2, offset = 0,axis1=0, axis2=1))
+
+    M1 = [[1, 2, 3, 4, 111, 6, 7, 11, 100],
+          [5, -6, 7, 8, 11, 8, 11],
+          [5, 2, -42, 8, 11],
+          [1, 6, 7, 11, 100]]
+
+    for i in range(len(M1)):
+        for j in range(len(M1[i])):
+            print(M1[i][j])
+        print('-----------------------')
+
+
+
 
     # For loops iterate over a given sequence.
     list_numbers = [2, 4, 6, 8]
