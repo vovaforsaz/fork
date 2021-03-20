@@ -10,11 +10,22 @@ if __name__ == '__main__':
     4.4. break and continue Statements, and else Clauses on Loops
     4.5. pass Statements¶
     """
+    M2 = [[-1, 2, 3, 4],
+          [5, -6, 7, 8],
+          [5, 6, 5, 8],
+          [1, 6, 7, 11]]
+    # TODO print diagonal - 1,-6,5,11
+    for i in range(len(M2)):
+        for j in reversed(range(len(M2))):
+            if i == j:
+                print(M2[i][j], end='')
+            else:
+                print('   ', end='')
+        print()
+    print('=======================')
+    print(np.diagonal(M2, offset=0, axis1=0, axis2=1))
 
-    # M1 = [[1,2,3,4,6,10,12],
-    #     [5,-6,7,8],
-    #     [5,6,5,8],
-    #     [1,6,7,11]]
+
     M2 = [[-1, 2, 3, 4],
           [5, -6, 7, 8],
           [5, 6, 5, 8],
