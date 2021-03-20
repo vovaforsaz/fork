@@ -20,8 +20,14 @@ if __name__ == '__main__':
           [5, 6, 5, 8],
           [1, 6, 7, 11]]
     # TODO print diagonal - 1,-6,5,11
-    tmp = reversed(M2)
-    print(tmp)#.diagonal(M2, offset=0, axis1=0, axis2=1))
+    for i in range(len(M2)):
+        for j in range(len(M2)):
+            if i == j:
+                print(M2[i][j], end='')
+            else:
+                print('   ', end='')
+        print()
+    print('=======================')
     print(np.diagonal(M2, offset = 0,axis1=0, axis2=1))
 
     M1 = [[1, 2, 3, 4, 111, 6, 7, 11, 100],
