@@ -9,7 +9,7 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(type(function_task1()) == list)
 
     def test_function_task2(self):
-        l1, l2 = [1, 2, 3], [1, 2, 3]
+        l1, l2 = [1, 2, 3], [1, 2, 3,5]
         self.assertTrue(function_task2(l1, l2) == l1 + l2)
 
 
