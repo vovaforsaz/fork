@@ -1,9 +1,25 @@
-import numpy as np
+"""Examples of using loops.
+
+The original module unconditionally imported :mod:`numpy` at import time
+even though the library is only required for demonstration code inside the
+``__main__`` section.  The execution environment used for the kata does not
+include ``numpy`` which caused ``ModuleNotFoundError`` during test discovery
+when importing this module.  To keep the training exercises lightweight and
+free of unnecessary dependencies we avoid importing ``numpy`` unless the
+demonstration block is executed directly.
+"""
+
+from typing import List
 
 if __name__ == '__main__':
+    # Import numpy only for the interactive examples below.  This avoids a
+    # hard dependency on numpy when the module is imported elsewhere (e.g. in
+    # the unit tests).
+    import numpy as np
+
     """
     There are two types of loops in Python, for and while.
-    
+
     @see https: // docs.python.org / 3.8 / tutorial / controlflow.html
     4.2. for Statements
     4.3. The range() Function
@@ -107,9 +123,9 @@ def loops_task1():
     """
     Use loop for creation list with 500 integer elements
     """
-    result = []
+    result: List[int] = []
     count = 0
-    while (count < 500):
+    while count < 500:
         result.append(count)
         count += 1
     return result
@@ -117,11 +133,16 @@ def loops_task1():
 
 def loops_task2():
     task2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    """Return a list containing only the even numbers from ``task2``.
+
+    The previous implementation returned only the first even element because it
+    exited the loop on the first match.  The function is intended to collect all
+    even numbers, so we accumulate them in a list and return it.
     """
-    Use loop for creation new list with even elements [2,4,6,8,10]
-    """
-    for result in task2:
-        if result % 2 == 0:
-            return result
+    evens: List[int] = []
+    for number in task2:
+        if number % 2 == 0:
+            evens.append(number)
+    return evens
 
 
